@@ -1,3 +1,7 @@
+cdef extern from *:
+    ctypedef char const_char 'const char'
+
+
 cdef extern from 'houdini/buffer.h':
     cdef struct buf:
         unsigned char *data
@@ -7,6 +11,7 @@ cdef extern from 'houdini/buffer.h':
 
     buf* bufnew(size_t)
     void bufrelease(buf *)
+    char* bufcstr(buf *)
 
 
 cdef extern from 'houdini/houdini.h':
