@@ -7,7 +7,7 @@ cpdef bytes escape_html(unsigned char *text, int secure=0):
     cdef bytes py_result
     cdef houdini.buf *ob = houdini.bufnew(128)
 
-    houdini.houdini_escape_html(ob, text, len(text), secure)
+    houdini.houdini_escape_html0(ob, text, len(text), secure)
 
     py_result = ob.data
     py_result = py_result[:ob.size]
@@ -73,6 +73,32 @@ cpdef bytes unescape_url(unsigned char *text):
     cdef houdini.buf *ob = houdini.bufnew(128)
 
     houdini.houdini_unescape_url(ob, text, len(text))
+
+    py_result = ob.data
+    py_result = py_result[:ob.size]
+    houdini.bufrelease(ob)
+
+    return py_result
+
+
+cpdef bytes escape_js(unsigned char *text):
+    cdef bytes py_result
+    cdef houdini.buf *ob = houdini.bufnew(128)
+
+    houdini.houdini_escape_js(ob, text, len(text))
+
+    py_result = ob.data
+    py_result = py_result[:ob.size]
+    houdini.bufrelease(ob)
+
+    return py_result
+
+
+cpdef bytes unescape_js(unsigned char *text):
+    cdef bytes py_result
+    cdef houdini.buf *ob = houdini.bufnew(128)
+
+    houdini.houdini_unescape_js(ob, text, len(text))
 
     py_result = ob.data
     py_result = py_result[:ob.size]

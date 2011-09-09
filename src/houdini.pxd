@@ -10,9 +10,11 @@ cdef extern from 'houdini/buffer.h':
 
 
 cdef extern from 'houdini/houdini.h':
-    void houdini_escape_html(buf *ob, unsigned char *src, size_t size, int secure)
+    void houdini_escape_html0(buf *ob, unsigned char *src, size_t size, int secure)
     void houdini_unescape_html(buf *ob, unsigned char *src, size_t size)
     void houdini_escape_uri(buf *ob, unsigned char *src, size_t size)
     void houdini_escape_url(buf *ob, unsigned char *src, size_t size)
     void houdini_unescape_uri(buf *ob, unsigned char *src, size_t size)
     void houdini_unescape_url(buf *ob, unsigned char *src, size_t size)
+    void houdini_escape_js(buf *ob, unsigned char *src, size_t size)
+    void houdini_unescape_js(buf *ob, unsigned char *src, size_t size)

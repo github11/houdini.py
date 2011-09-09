@@ -9,13 +9,17 @@ setup(
     author='Frank Smit',
     author_email='frank@61924.nl',
     license='MIT',
-    long_description=open('README.txt').read(),
+    long_description=open('README.rst').read(),
     cmdclass = {'build_ext': build_ext},
     ext_modules=[Extension('houdini', [
         'src/houdini.py.pyx',
         'src/houdini/buffer.c',
-        'src/houdini/houdini_uri.c',
-        'src/houdini/houdini_html.c'
+        'src/houdini/houdini_js_e.c',
+        'src/houdini/houdini_js_u.c',
+        'src/houdini/houdini_uri_e.c',
+        'src/houdini/houdini_uri_u.c',
+        'src/houdini/houdini_html_e.c',
+        'src/houdini/houdini_html_u.c'
     ])],
     classifiers = [
         'Development Status :: 4 - Beta',
