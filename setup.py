@@ -2,7 +2,7 @@ from distutils.core import setup, Extension
 
 
 setup(
-    name='houdini',
+    name='houdini.py',
     version='0.1.0',
     description='A Python binding for Houdini.',
     author='Frank Smit',
