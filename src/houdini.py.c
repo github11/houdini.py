@@ -204,7 +204,7 @@ static PyMethodDef houdini_methods[] = {
     {"escape_url", py_escape_url, METH_VARARGS, "Escape URL"},
     {"unescape_uri", py_unescape_uri, METH_VARARGS, "Unescape URI"},
     {"unescape_url", py_unescape_url, METH_VARARGS, "Unescape URL"},
-    {"escape_js", py_escape_js, METH_VARARGS, "Unescape JavaScript"},
+    {"escape_js", py_escape_js, METH_VARARGS, "Escape JavaScript"},
     {"unescape_js", py_unescape_js, METH_VARARGS, "Unescape JavaScript"},
     {NULL, NULL, 0, NULL} /* Sentinel */
 };
