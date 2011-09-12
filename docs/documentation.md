@@ -9,8 +9,8 @@ and 3.2.
 
 ## Installation
 
-Download Himitsu from [Github][1] and run the following command. Keep in mind
-that Himitsu has only been tested with Python 2.7 and 3.2.
+Download Houdini.py from [Github][1] and run the following command. Keep in
+mind that Houdini.py has only been tested with Python 2.7 and 3.2.
 
     python setup.py install
 
