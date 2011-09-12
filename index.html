@@ -1,77 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" lang="en">
 <head>
-  <meta charset='utf-8'>
-
-  <title>FSX/houdini.py @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #e4d1d4;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #1b2e2b; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #1b2e2b; }
-    h3 { text-align: center; color: #1b2e2b; }
-    a { color: #1b2e2b; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+    <meta charset="utf-8" />
+    <title>Houdini.py, a Python binding for Houdini</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <a href="http://github.com/FSX/houdini.py"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
-  <div id="container">
+<div id="wrapper">
+    <header id="header">
+        <h1>Houdini.py</h1>
+        <p>Himitsu, A Python binding for <a href="https://github.com/tanoku/houdini">houdini</a>.</p>
+    </header>
 
-    <div class="download">
-      <a href="http://github.com/FSX/houdini.py/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/FSX/houdini.py/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
+    <nav id="sidebar">
+        <ul>
+<li><ul>
+<li><a href="#toc_0">Introduction</a></li>
+<li><a href="#toc_1">Installation</a></li>
+<li><a href="#toc_2">Usage</a></li>
+<li><a href="#toc_3">API</a></li>
+<li><a href="#toc_4">Changelog</a></li>
+<li><ul>
+<li><a href="#toc_5">0.1.0 (2011-09-12)</a></li>
+</ul></li>
+<li><a href="#toc_6">License</a></li>
+</ul></li>
+</ul>
 
-    <h1><a href="http://github.com/FSX/houdini.py">houdini.py</a>
-      <span class="small">by <a href="http://github.com/FSX">FSX</a></span></h1>
+    </nav>
 
-    <div class="description">
-      A Python binding for Houdini.
-    </div>
+    <section id="content">
+        <h2 id="toc_0">Introduction</h2>
 
-    <h2>Authors</h2>
-<p>Frank Smit (frank@61924.nl)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Frank Smit (frank@61924.nl)<br/>      </p>
+<p>Houdini.py is a Python binding for <a href="https://github.com/tanoku/houdini">Houdini</a> that provides (un)escaping
+functions for HTML, URLs/URIs and Javascript. It has been tested on Python 2.7
+and 3.2.</p>
+
+<h2 id="toc_1">Installation</h2>
+
+<p>Download Houdini.py from <a href="https://github.com/FSX/houdini.py">Github</a> and run the following command. Keep in
+mind that Houdini.py has only been tested with Python 2.7 and 3.2.</p>
+
+<pre><code>python setup.py install
+</code></pre>
+
+<p>Or from PyPi:</p>
+
+<pre><code>pip install houdini.py
+</code></pre>
+
+<p>And you're done.</p>
+
+<h2 id="toc_2">Usage</h2>
+
+<p>Example:</p>
+
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">houdini</span> <span class="kn">as</span> <span class="nn">h</span>
+
+<span class="k">print</span> <span class="n">h</span><span class="o">.</span><span class="n">escape_html</span><span class="p">(</span><span class="s">&#39;&lt;b&gt;test&lt;/b&gt;&#39;</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">h</span><span class="o">.</span><span class="n">escape_html</span><span class="p">(</span><span class="s">&#39;&amp;lt;b&amp;gt;test&amp;lt;/b&amp;gt;&#39;</span><span class="p">)</span>
+</pre></div>
 
 
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/FSX/houdini.py/zipball/master">zip</a> or
-      <a href="http://github.com/FSX/houdini.py/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/FSX/houdini.py</pre>
-    </p>
+<h2 id="toc_3">API</h2>
 
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/FSX/houdini.py">FSX/houdini.py</a>
-    </div>
+<p>All of the following functions and constants are from the <code>houdini</code> module.</p>
 
-  </div>
+<ul>
+<li><code>escape_html</code></li>
+<li><code>unescape_html</code></li>
+<li><code>escape_uri</code></li>
+<li><code>unescape_uri</code></li>
+<li><code>escape_url</code></li>
+<li><code>unescape_url</code></li>
+<li><code>escape_js</code></li>
+<li><code>unescape_js</code></li>
+</ul>
 
-  
+<p>All methods, except <code>escape_html</code>, accept one argument: the text that needs to
+be escape or unescaped. <code>escape_html</code> accepts an optional second argument:
+<code>secure</code>. When <code>secure</code> is <code>1</code> forward slashes will also be escaped. It's <code>0</code>
+by default.</p>
+
+<h2 id="toc_4">Changelog</h2>
+
+<h3 id="toc_5">0.1.0 (2011-09-12)</h3>
+
+<ul>
+<li>Initial release.</li>
+</ul>
+
+<h2 id="toc_6">License</h2>
+
+<p>Copyright (C) 2011 by Frank Smit <a href="mailto:frank@61924.nl">frank@61924.nl</a></p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+
+    </section>
+</div>
+
 </body>
 </html>
