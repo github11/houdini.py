@@ -7,6 +7,7 @@ setup(
     description='A Python binding for Houdini.',
     author='Frank Smit',
     author_email='frank@61924.nl',
+    url='http://python-houdini.61924.nl/',
     license='MIT',
     long_description=open('README.rst').read(),
     ext_modules=[Extension('houdini', [

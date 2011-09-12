@@ -1,7 +1,8 @@
 ## Introduction
 
-Houdini.py is a wrapper for [Houdini][0] that provides (un)escaping functions
-for HTML, URLs/URIs and Javascript.
+Houdini.py is a Python binding for [Houdini][0] that provides (un)escaping
+functions for HTML, URLs/URIs and Javascript. It has been tested on Python 2.7
+and 3.2.
 
  [0]: https://github.com/tanoku/houdini
 
